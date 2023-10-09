@@ -1,5 +1,3 @@
-import { Menu, MenuItem } from "@mui/material";
-import { useState } from "react";
 import mainLogo from '../assets/img/main-logo.svg'
 import homeIcon from '../assets/img/home_outline_white.svg'
 import feedsIcon from '../assets/img/feed.svg'
