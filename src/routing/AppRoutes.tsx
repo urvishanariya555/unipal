@@ -8,6 +8,9 @@ import Welcome from "../pages/Welcome";
 import ForgotPassword from "../pages/ForgotPassword";
 import OtpVerification from "../pages/OtpVerification";
 import Feeds from "../pages/Feeds";
+import HelpMe from "../pages/HelpMe";
+import Profile from "../pages/Profile";
+import Offers from "../pages/Offers";
 
 const AppRoutes = () => {
   return (
@@ -22,8 +25,10 @@ const AppRoutes = () => {
         <Route path="otpVerification" element={<OtpVerification />} />
         <Route path="/" element={<Layout />}>
           <Route path="dashboard" element={<Dashboard />} />
-          {/* <Route path="home" element={<Home />} /> */}
+          <Route path="help-me" element={<HelpMe />} />
           <Route path="feeds" element={<Feeds />} />
+          <Route path="offers" element={<Offers />} />
+          <Route path="profile" element={<Profile />} />
         </Route>
       </Route>
     </Routes>

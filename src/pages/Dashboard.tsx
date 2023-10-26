@@ -30,8 +30,10 @@ import * as React from 'react'
 import Dialog from '@mui/material/Dialog'
 import DialogContent from '@mui/material/DialogContent'
 import DialogTitle from '@mui/material/DialogTitle'
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
+  const navigate = useNavigate()
   const [calendarShow, setCalendarShow] = useState(false)
   const [notesShow, setNotesShow] = useState(false)
   const [toDoListShow, setToDoListShow] = useState(false)
@@ -70,8 +72,9 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="p-[30px] min-h-[calc(100vh_-_91px)] max-w-[calc(100vw_-_306px)] min-[1920px]:max-w-[calc(100vw_-_298px)] overflow-hidden max-[991px]:max-w-[100vw]">
-        {!calendarShow && !toDoListShow && !notesShow && <>
+      <div className="p-lg-[30px] p-[16px] min-h-[calc(100vh_-_60px)] min-[992px]:min-h-[calc(100vh_-_91px)] max-w-[calc(100vw_-_306px)] min-[1920px]:max-w-[calc(100vw_-_298px)] overflow-hidden max-[991px]:max-w-[100vw]">
+        {!calendarShow && !toDoListShow && !notesShow && 
+        <>
           <div className='w-full'>
             <div className="text-[20px] font-bold flex items-center gap-[10px] mb-[20px]">
               Hi <span className="text-[#9878DE]">John,</span> Good Morning
@@ -103,26 +106,26 @@ const Dashboard = () => {
             </Swiper>
             <div className='mt-[25px]'>
               <div className="pb-[15px] flex flex-between">
-                <div className='text-[20px] max-[767px]:text-[16px] text-[#000] font-bold flex-1'>To Do List</div>
-                <div className='text-[18px] max-[767px]:text-[14px] text-[#787878] font-regular underline cursor-pointer' onClick={() => setToDoListShow(true)}>View All</div>
+                <div className='text-[20px] max-[767px]:text-[16px] 
+                text-[#000] font-bold flex-1 '>To Do List</div>
+                <div className='text-[18px] max-[767px]:text-[14px] 
+                text-[#787878] font-regular underline cursor-pointer' 
+                onClick={() => setToDoListShow(true)}>View All</div>
               </div>
               <Swiper
                 spaceBetween={30}
                 breakpoints={{
                   0: {
                     slidesPerView: 1,
-                    spaceBetween: 50
                   },
                   768: {
                     slidesPerView: 2,
                   },
-                  992: {
+                  1025: {
                     slidesPerView: 3,
-                    spaceBetween: 25
                   },
-                  1280: {
+                  1440: {
                     slidesPerView: 4,
-                    spaceBetween: 30
                   }
                 }}
               >
@@ -194,10 +197,10 @@ const Dashboard = () => {
                   768: {
                     slidesPerView: 2,
                   },
-                  992: {
+                  1025: {
                     slidesPerView: 3,
                   },
-                  1280: {
+                  1440: {
                     slidesPerView: 4,
                   }
                 }}
@@ -227,7 +230,7 @@ const Dashboard = () => {
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <div className='feature-card relative'>
+                  <div className='feature-card relative cursor-pointer' onClick={() => navigate("/help-me")}>
                     <div className='h-[60px] w-[60px] rounded-full flex items-center justify-center bg-[#ff8b0f59] mb-[24px]'>
                       <img src={Chat} alt='Chat' />
                     </div>
@@ -239,7 +242,8 @@ const Dashboard = () => {
               </Swiper>
             </div>
           </div>
-        </>}
+        </>
+        }
         {calendarShow &&
           <>
             {!analyticScheduleShow ? (
@@ -439,7 +443,7 @@ const Dashboard = () => {
                         <div className='bg-[#FF7DA0] rounded-l-[10px] w-[12px] h-full absolute left-0 top-0'></div>
                         <div className='flex justify-between items-center flex-col'>
                           <div className='text-[#000] font-[600] text-[16px] mb-[12px] border-b-[2px] border-[#222] px-[16px] '>Analysis</div>
-                          <div className='text-[#000] font-[500] text-[14px]'>An ideal timeline to get this task done with perfect is <span className='text-[#6266FA] font-[700] '>8 days.</span></div>
+                          <div className='text-[#000] font-[500] text-[14px] text-center'>An ideal timeline to get this task done with perfect is <span className='text-[#6266FA] font-[700] '>8 days.</span></div>
                           <div className='text-[#000] font-[500] font-italic text-[14px]'>Currently you are </div>
                           <div className='text-[#FF0707] font-[700] text-[14px]'>LATE</div>
                         </div>
@@ -447,11 +451,11 @@ const Dashboard = () => {
                     </div>
                   </div>
                   <div className="flex justify-between items-center mt-[20px]">
-                    <div className="text-[20px] font-bold flex items-center gap-[10px]" >
+                    <div className="text-[16px] sm:text-[20px] font-bold flex items-center gap-[10px]" >
                       Meeting Schedule
                     </div>
                     <div
-                      className='bg-[#000] cursor-pointer rounded-[7px] h-[33px] flex justify-center items-center px-[17px] text-[#fff] text-[14px] font-[600]'
+                      className='bg-[#000] cursor-pointer rounded-[7px] h-[33px] flex justify-center items-center px-[10px] sm:px-[17px] text-[#fff] text-[12px] sm:text-[14px]  font-[600]'
                       onClick={handleClickOpenDialog}
                     >Add Meeting Schedule</div>
                   </div>
@@ -535,13 +539,13 @@ const Dashboard = () => {
         }
         {toDoListShow &&
           <div className='w-full'>
-            <div className="flex justify-between items-center">
-              <div className="text-[20px] font-bold flex items-center gap-[10px]" >
+            <div className="flex justify-between items-center flex-content-heading">
+              <div className="text-[20px] font-bold flex items-center gap-[10px] pb-3 pb-sm-0" >
                 <img src={backarrowIcon} alt='backarrowIcon' className='mr-1 h-[24px] cursor-pointer' onClick={() => setToDoListShow(false)} />
                 To Do List
               </div>
               <div className='flex gap-[15px]'>
-                <div className='w-[235px] text-[16px] font-[600] capitalize pl-[20px] pr-[15px] h-[41px] flex items-center justify-between bg-[#fff] rounded-[8px]'>
+                <div className=' w-[180px] sm:w-[235px] text-[16px] font-[600] capitalize pl-[20px] pr-[15px] h-[41px] flex items-center justify-between bg-[#fff] rounded-[8px]'>
                   <div>All Categories</div>
                   <img src={arrowDownIcon} alt='arrowDownIcon' />
                 </div>
@@ -645,8 +649,8 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className='fixed bottom-[40px] right-[40px] cursor-pointer z-10' onClick={handleNewTaskOpenDialog}>
-              <img src={addIconButton} alt='addIconButton' />
+            <div className='fixed md:bottom-[40px] bottom-[60px] md:right-[40px] right-[10px] cursor-pointer z-10' onClick={handleNewTaskOpenDialog}>
+              <img src={addIconButton} alt='addIconButton' className='h-[60px] md:h-auto'/>
             </div>
           </div>
         }
@@ -742,8 +746,8 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className='fixed bottom-[40px] right-[40px] cursor-pointer z-10' onClick={handleNotesOpenDialog}>
-              <img src={addIconButton} alt='addIconButton' />
+            <div className='fixed md:bottom-[40px] bottom-[60px] md:right-[40px] right-[10px] cursor-pointer z-10' onClick={handleNewTaskOpenDialog}>
+              <img src={addIconButton} alt='addIconButton' className='h-[60px] md:h-auto'/>
             </div>
           </div>
         }
@@ -767,7 +771,7 @@ const Dashboard = () => {
           <form>
             <div className="">
               <label className="text-sm font-medium text-[#878C8F]">Date</label>
-              <div className="border border-[#BEBEBE] rounded-[10px] mt-2 relative w-[345px]">
+              <div className="border border-[#BEBEBE] rounded-[10px] mt-2 relative w-full sm:w-[345px]">
                 <input
                   type="text"
                   placeholder="Select Date"
@@ -777,7 +781,7 @@ const Dashboard = () => {
             </div>
             <div className="mt-[12px]">
               <label className="text-sm font-medium text-[#878C8F]">Time</label>
-              <div className="border border-[#BEBEBE] rounded-[10px] mt-2 relative w-[345px]">
+              <div className="border border-[#BEBEBE] rounded-[10px] mt-2 relative w-full sm:w-[345px]">
                 <input
                   type="text"
                   placeholder="Select Time"
@@ -786,10 +790,10 @@ const Dashboard = () => {
               </div>
             </div>
             <div className='flex flex-1 gap-[15px] mt-[17px]'>
-              <button onClick={handleButtonClose} className='w-full bg-[#666] rounded-[12px] font-[600] py-[18px] text-[#fff] text-[16px]'>
+              <button onClick={handleButtonClose} className='w-full bg-[#666] rounded-[12px] font-[600] py-[12px] sm:py-[18px] text-[#fff] text-[16px]'>
                 Cancel
               </button>
-              <button onClick={handleButtonClose} className='w-full bg-[#000] rounded-[12px] font-[600] py-[18px] text-[#fff] text-[16px]'>
+              <button onClick={handleButtonClose} className='w-full bg-[#000] rounded-[12px] font-[600] py-[12px] sm:py-[18px] text-[#fff] text-[16px]'>
                 Add
               </button>
             </div>
@@ -814,7 +818,7 @@ const Dashboard = () => {
           <form>
             <div className="">
               <label className="text-sm font-medium text-[#878C8F]">Title</label>
-              <div className="border border-[#BEBEBE] rounded-[10px] mt-2 relative w-[345px]">
+              <div className="border border-[#BEBEBE] rounded-[10px] mt-2 relative w-full sm:w-[345px]">
                 <input
                   type="text"
                   placeholder="Type Title Name"
@@ -823,7 +827,7 @@ const Dashboard = () => {
             </div>
             <div className="mt-[12px]">
               <label className="text-sm font-medium text-[#878C8F]">Descriptions</label>
-              <div className="border border-[#BEBEBE] rounded-[10px] mt-2 relative w-[345px]">
+              <div className="border border-[#BEBEBE] rounded-[10px] mt-2 relative w-full sm:w-[345px]">
                 <textarea
                   rows={4}
                   placeholder="Type Descriptions"
@@ -832,11 +836,11 @@ const Dashboard = () => {
               </div>
             </div>
             <div className='flex flex-1 gap-[15px] mt-[17px]'>
-              <button onClick={handleNoteDialogClose} className='w-full bg-[#666] rounded-[12px] font-[600] py-[18px] text-[#fff] text-[16px]'>
+              <button onClick={handleNoteDialogClose} className='w-full bg-[#666] rounded-[12px] font-[600] py-[12px] sm:py-[18px] text-[#fff] text-[16px]'>
                 Cancel
               </button>
               <button onClick={handleNoteDialogClose} className='w-full bg-[#000] rounded-[12px] 
-            font-[600] py-[18px] text-[#fff] text-[16px]'>
+            font-[600] py-[12px] sm:py-[18px] text-[#fff] text-[16px]'>
                 Add
               </button>
             </div>
@@ -929,11 +933,11 @@ const Dashboard = () => {
               </div>
             </div>
             <div className='flex flex-1 gap-[15px] mt-[17px]'>
-              <button onClick={handleNewTaskDialogClose} className='w-full bg-[#666] rounded-[12px] font-[600] py-[18px] text-[#fff] text-[16px]'>
+              <button onClick={handleNewTaskDialogClose} className='w-full bg-[#666] rounded-[12px] font-[600] py-[12px] sm:py-[18px] text-[#fff] text-[16px]'>
                 Cancel
               </button>
               <button onClick={handleNewTaskDialogClose} className='w-full bg-[#000] rounded-[12px] 
-                font-[600] py-[18px] text-[#fff] text-[16px]'>
+                font-[600] py-[12px] sm:py-[18px] text-[#fff] text-[16px]'>
                 Add
               </button>
             </div>
@@ -941,25 +945,30 @@ const Dashboard = () => {
         </DialogContent>
       </Dialog>
       <footer className='sticky bottom-0 w-full bg-[#fff] h-[60px] z-10 min-[992px]:hidden'>
-        <div className='grid grid-cols-5 h-full'>
-          <div className='flex justify-center items-center flex-col relative gap-y-[5px]'>
+        <div className='grid grid-cols-5 h-full'>           
+          <div className='flex justify-center items-center flex-col relative gap-y-[5px]' 
+          onClick={() => navigate("/dashboard")}>
             <div className='absolute top-0 w-full h-[2px] bg-[#9878DE]'></div>
             <div><img src={homeActive} alt='homeActive' /></div>
             <div className='text-[12px] text-[#9878DE] font-medium'>Home</div>
-          </div>
-          <div className='flex justify-center items-center flex-col relative gap-y-[5px]'>
+          </div>        
+          <div className='flex justify-center items-center flex-col relative gap-y-[5px]'
+          onClick={() => navigate("/feeds")}>
             <div><img src={newsLaterIcon} alt='homeActive' /></div>
             <div className='text-[12px] text-[#7B838A] font-medium'>Feeds</div>
           </div>
-          <div className='flex justify-center items-center flex-col relative gap-y-[5px]'>
+          <div className='flex justify-center items-center flex-col relative gap-y-[5px]'
+          onClick={() => navigate("/help-me")}>
             <div><img src={HelpFooterIcon} alt='homeActive' /></div>
             <div className='text-[12px] text-[#7B838A] font-medium'>Help Me</div>
           </div>
-          <div className='flex justify-center items-center flex-col relative gap-y-[5px]'>
+          <div className='flex justify-center items-center flex-col relative gap-y-[5px]'
+          onClick={() => navigate("/offers")}>
             <div><img src={localOfferIcon} alt='homeActive' /></div>
             <div className='text-[12px] text-[#7B838A] font-medium'>Offers</div>
           </div>
-          <div className='flex justify-center items-center flex-col relative gap-y-[5px]'>
+          <div className='flex justify-center items-center flex-col relative gap-y-[5px]'
+          onClick={() => navigate("/profile")}>
             <div><img src={profileIcon} alt='homeActive' /></div>
             <div className='text-[12px] text-[#7B838A] font-medium'>Profile</div>
           </div>

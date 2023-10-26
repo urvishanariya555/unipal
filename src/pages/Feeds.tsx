@@ -1,762 +1,209 @@
 import morningImg from '../assets/img/sunrise.svg'
-import my_order from '../assets/img/my_order.svg'
-import calendarDateIcon from '../assets/img/date.svg'
-import TimerIcon from '../assets/img/access_time.svg'
-import circle_right_arrow_blue from '../assets/img/circle_right_arrow_blue.svg'
-import circle_right_arrow_pink from '../assets/img/circle_right_arrow_pink.svg'
-import circle_right_arrow_orange from '../assets/img/circle_right_arrow_orange.svg'
-import connectIcon from '../assets/img/connect.svg'
-import homeActive from '../assets/footer-mobile/home_active.svg'
+import feedsImage1 from '../assets/img/help-menu-education.svg'
+import feedsImage2 from '../assets/img/help-menu-news.svg'
+import feedsImage3 from '../assets/img/help-menu-memes.svg'
+import feedsImage4 from '../assets/img/help-menu-jobs.svg'
+import feedsImage5 from '../assets/img/help-menu-health.svg'
+import feedsImage6 from '../assets/img/help-menu-sports.svg'
+import feedsImage7 from '../assets/img/help-menu-business.svg'
+import feedsImage8 from '../assets/img/help-menu-technology.svg'
+import feedsImage9 from '../assets/img/help-menu-alerts.svg'
+import feedsImage10 from '../assets/img/help-menu-lifestyle.svg'
+import feedBlogImg from '../assets/img/feeds_menu_image.png'
+import home_outline from '../assets/footer-mobile/home_outline.svg'
 import profileIcon from '../assets/footer-mobile/My_Profile.svg'
 import localOfferIcon from '../assets/footer-mobile/local_offer.svg'
-import newsLaterIcon from '../assets/footer-mobile/Newspaper.svg'
+import Newspaper_active from '../assets/footer-mobile/Newspaper_active.svg'
 import HelpFooterIcon from '../assets/footer-mobile/help_outline.svg'
-import feeds_menu_image from '../assets/img/feeds_menu_image.png'
-import arrowDownIcon from '../assets/img/keyboard_arrow_down.svg'
-import playGif from '../assets/img/play.gif'
-import closeIcon from '../assets/img/close_small.svg'
-import new_order from '../assets/img/new_order.svg'
-import customizeOrderImg from '../assets/img/customize-order.svg'
-import quickOrderImg from '../assets/img/quick-order.svg'
-import backarrowIcon from '../assets/img/backarrow.svg'
-import uploadIcon from '../assets/img/upload.svg'
-import addIconButton from '../assets/img/addIcon.svg'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { useState } from 'react'
-import * as React from 'react'
+import { useNavigate } from "react-router-dom";
 
-import Dialog from '@mui/material/Dialog'
-import DialogContent from '@mui/material/DialogContent'
 
 const Feeds = () => {
-  const [quickOrderShow, setQuickOrderShow] = useState(false)
-  const [quickOrderListShow, setQuickOrderListShow] = useState(false)
-  const [customOrderShow, setCustomOrderShow] = useState(false)
-  const [customOrderListShow, setCustomOrderListShow] = useState(false)
-
-  const [openOrderMenuDialog, setOpenOrderMenuDialog] = React.useState(false);
-
-  const handleOpenOrderMenuDialog = () => {
-    setOpenOrderMenuDialog(true);
-  };
-
-  const handleOrderMenuClose = () => {
-    setOpenOrderMenuDialog(false);
-  };
-
+  const navigate = useNavigate()
   return (
     <>
-      <div className="p-[30px] min-h-[calc(100vh_-_91px)] max-w-[calc(100vw_-_306px)] min-[1920px]:max-w-[calc(100vw_-_298px)] overflow-hidden max-[991px]:max-w-[100vw]">
-        {!quickOrderShow && !customOrderShow &&
-          <div className='w-full'>
-            <div className="text-[20px] font-bold flex items-center gap-[10px] mb-[20px]">
-              Hi <span className="text-[#9878DE]">John,</span> Good Morning
-              <img src={morningImg} alt="morningImg" />
-            </div>
-            <div className='mt-[25px]'>
-              <div className="pb-[15px] flex flex-between">
-                <div className='text-[20px] max-[767px]:text-[16px] text-[#000] font-bold flex-1'>How It's Work?</div>
+      <div className="p-lg-[30px] p-[16px] min-h-[calc(100vh_-_60px)] min-[992px]:min-h-[calc(100vh_-_91px)] max-w-[calc(100vw_-_306px)] min-[1920px]:max-w-[calc(100vw_-_298px)] overflow-hidden max-[991px]:max-w-[100vw]">
+        <div className='w-full'>
+          <div className="text-[20px] font-bold flex items-center gap-[10px] mb-[20px]">
+            Hi <span className="text-[#9878DE]">John,</span> Good Morning
+            <img src={morningImg} alt="morningImg" />
+          </div>
+          <div className='flex justify-between max-[1199px]:justify-start flex-wrap gap-[10px] sm:gap-[20px] min-[1024px]:gap-[20px] mb-[20px] md:mb-[50px]'>
+            <div className='flex justify-center flex-col items-center gap-[5px] sm:gap-[10px]'>
+              <div className='h-[76px] w-[76px] sm:h-[85px] sm:w-[85px] rounded-[98px] bg-[#fff] flex items-center justify-center'>
+                <img src={feedsImage1} alt='feedsImage1' className='h-[60%] sm:h-auto'/>
               </div>
-              <Swiper
-                spaceBetween={37}
-                breakpoints={{
-                  0: {
-                    slidesPerView: 1,
-                  },
-                  768: {
-                    slidesPerView: 2,
-                  },
-                  992: {
-                    slidesPerView: 3,
-                  },
-                  1280: {
-                    slidesPerView: 4,
-                  }
-                }}
-              >
-                <SwiperSlide>
-                  <div
-                    className='feature-card relative cursor-pointer p-0 border-none overflow-hidden'
-                  >
-                    <img src={feeds_menu_image} alt='feeds_menu_image' className='h-[190px] w-full rounded-[10px] overflow-hidden' />
-                    <div className='translate-center z-10'>
-                      <img src={playGif} alt='playGif' className='' />
-                      <div className='absolute top-0 min-[1500px]:top-[20px] min-w-[120px] left-0 w-full h-full text-[#fff] font-[700] flex justify-center'>How It's Work?</div>
-                    </div>
-                    <div className='bg-[#00000080] w-full h-full absolute top-0 left-0'></div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div
-                    className='feature-card relative cursor-pointer min-h-[190px] flex flex-col justify-between'
-                    onClick={handleOpenOrderMenuDialog}
-                  >
-                    <div className='h-[60px] w-[60px] rounded-full flex items-center justify-center bg-[#7aa0ff59] mb-[42px]'>
-                      <img src={new_order} alt='new_order' className='h-[36px]' />
-                    </div>
-                    <div className='text-[22px] text-[#000] font-bold flex items-center justify-between'>New Order
-                      <img src={circle_right_arrow_blue} alt='circle_right_arrow_blue' />
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className='feature-card relative cursor-pointer min-h-[190px] flex flex-col justify-between'>
-                    <div className='h-[60px] w-[60px] rounded-full flex items-center justify-center bg-[#ff80a159] mb-[42px]'>
-                      <img src={my_order} alt='my_order' className='h-[36px]' />
-                    </div>
-                    <div className='text-[22px] text-[#000] font-bold flex items-center justify-between'>My Oredrs
-                      <img src={circle_right_arrow_pink} alt='circle_right_arrow_pink' />
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className='feature-card relative min-h-[190px] flex flex-col justify-between'>
-                    <div className='h-[60px] w-[60px] rounded-full flex items-center justify-center bg-[#ff8b0f59]'>
-                      <img src={connectIcon} alt='Chat' className='h-[36px]' />
-                    </div>
-                    <div className='text-[22px] text-[#000] font-bold flex items-center justify-between'>Connect
-                      <img src={circle_right_arrow_orange} alt='circle_right_arrow_orange' />
-                    </div>
-                    <div className='texxt-[#808080] text-[14px] font-[500]'>We are here to discuss about your new tasks & Existing Offers</div>
-                  </div>
-                </SwiperSlide>
-              </Swiper>
+              <p className='text-[14px] font-[600] text-[#111]'>Education</p>
+            </div>
+            <div className='flex justify-center flex-col items-center gap-[5px] sm:gap-[10px]'>
+              <div className='h-[76px] w-[76px] sm:h-[85px] sm:w-[85px] rounded-[98px] bg-[#fff] flex items-center justify-center'>
+                <img src={feedsImage2} alt='feedsImage2' className='h-[60%] sm:h-auto'/>
+              </div>
+              <p className='text-[14px] font-[600] text-[#111]'>News</p>
+            </div>
+            <div className='flex justify-center flex-col items-center gap-[5px] sm:gap-[10px]'>
+              <div className='h-[76px] w-[76px] sm:h-[85px] sm:w-[85px] rounded-[98px] bg-[#fff] flex items-center justify-center'>
+                <img src={feedsImage3} alt='feedsImage3' className='h-[60%] sm:h-auto'/>
+              </div>
+              <p className='text-[14px] font-[600] text-[#111]'>Memes</p>
+            </div>
+            <div className='flex justify-center flex-col items-center gap-[5px] sm:gap-[10px]'>
+              <div className='h-[76px] w-[76px] sm:h-[85px] sm:w-[85px] rounded-[98px] bg-[#fff] flex items-center justify-center'>
+                <img src={feedsImage4} alt='feedsImage4' className='h-[60%] sm:h-auto'/>
+              </div>
+              <p className='text-[14px] font-[600] text-[#111]'>Jobs</p>
+            </div>
+            <div className='flex justify-center flex-col items-center gap-[5px] sm:gap-[10px]'>
+              <div className='h-[76px] w-[76px] sm:h-[85px] sm:w-[85px] rounded-[98px] bg-[#fff] flex items-center justify-center'>
+                <img src={feedsImage5} alt='feedsImage5' className='h-[60%] sm:h-auto'/>
+              </div>
+              <p className='text-[14px] font-[600] text-[#111]'>Health</p>
+            </div>
+            <div className='flex justify-center flex-col items-center gap-[5px] sm:gap-[10px]'>
+              <div className='h-[76px] w-[76px] sm:h-[85px] sm:w-[85px] rounded-[98px] bg-[#fff] flex items-center justify-center'>
+                <img src={feedsImage6} alt='feedsImage6' className='h-[60%] sm:h-auto'/>
+              </div>
+              <p className='text-[14px] font-[600] text-[#111]'>Sports</p>
+            </div>
+            <div className='flex justify-center flex-col items-center gap-[5px] sm:gap-[10px]'>
+              <div className='h-[76px] w-[76px] sm:h-[85px] sm:w-[85px] rounded-[98px] bg-[#fff] flex items-center justify-center'>
+                <img src={feedsImage7} alt='feedsImage7' className='h-[60%] sm:h-auto'/>
+              </div>
+              <p className='text-[14px] font-[600] text-[#111]'>Business</p>
+            </div>
+            <div className='flex justify-center flex-col items-center gap-[5px] sm:gap-[10px]'>
+              <div className='h-[76px] w-[76px] sm:h-[85px] sm:w-[85px] rounded-[98px] bg-[#fff] flex items-center justify-center'>
+                <img src={feedsImage8} alt='feedsImage8' className='h-[60%] sm:h-auto'/>
+              </div>
+              <p className='text-[14px] font-[600] text-[#111]'>Technology</p>
+            </div>
+            <div className='flex justify-center flex-col items-center gap-[5px] sm:gap-[10px]'>
+              <div className='h-[76px] w-[76px] sm:h-[85px] sm:w-[85px] rounded-[98px] bg-[#fff] flex items-center justify-center'>
+                <img src={feedsImage9} alt='feedsImage9' className='h-[60%] sm:h-auto'/>
+              </div>
+              <p className='text-[14px] font-[600] text-[#111]'>Alerts</p>
+            </div>
+            <div className='flex justify-center flex-col items-center gap-[5px] sm:gap-[10px]'>
+              <div className='h-[76px] w-[76px] sm:h-[85px] sm:w-[85px] rounded-[98px] bg-[#fff] flex items-center justify-center'>
+                <img src={feedsImage10} alt='feedsImage10' className='h-[60%] sm:h-auto'/>
+              </div>
+              <p className='text-[14px] font-[600] text-[#111]'>Lifestyle</p>
             </div>
           </div>
-        }
-        {quickOrderShow &&
-          <>
-            {!quickOrderListShow &&
-              <div>
-                <div className="text-[24px] font-bold flex items-center gap-[10px] mb-[24px]" >
-                  <img src={backarrowIcon} alt='backarrowIcon' className='mr-1 h-[24px] cursor-pointer'
-                    onClick={() => setQuickOrderShow(false)} />
-                  Quick Order
+          <div className='bg-[#fff] p-[20px] rounded-[12px] shadow-sm'>
+            <div className='lg:grid lg:grid-cols-12 gap-[30px]'>
+              <div className="col-span-9 max-[767px]:col-span-12">
+                <div>
+                  <div>
+                    <img className='h-[340px] rounded-[12px] w-full object-cover' src='https://s3-alpha-sig.figma.com/img/0fc8/96af/04ea02d6732c632343c0232a31158192?Expires=1698624000&Signature=UQOnrz-Wf0NKZVcILF6UbcAC4TQTMaIt9DgwYW6C1562NB8lRayABUx5Vd7RW65L6iY39zAdR1vJiiVlPm7uK24pix~iG~V2uVPBer2Ejal093NcyH86FB-ZleVGr9foz4bkzbADdazx1wAWelSeHtkEROdqO9xGwzTm3LGbRPIOG1JXOeyDXUHEZ-gVx2LtyINsAl-4FfpVNUtYO9N9PJL3R3j7dk4kiN9mEl3z1knn4ZXmpRALBSPAOI7xed634tZQyFObpcRX3AoNJ-89rfOBGp3c-4Vl-yhKZraUOA7gKpbdlrGMqJzGzNi8frapp1HM7brkbop6HEe~e5agCA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4' />
+                  </div>
+                  <div className='font-[600] text-[20px] text-[#181C32] mb-[40px] mt-[20px]'>Metronic Admin - How To Get Started Tutorial. Create a customizable SaaS Based applications and solutions</div>
+                  <div className='font-[500] text-[15px] text-[#7E8299]'>First, a disclaimer - the entire process of writing a blog post often takes more than a couple of hours, even if you can type eighty words per minute and your writing skills are sharp. From the seed of the idea to finally hitting “Publish,” you might spend several days or maybe even a week “writing” a blog post, but it's important to spend those vital hours planning your post and even thinking about Your Post (yes, thinking counts as working if you're a blogger) before you actually write it.
+                    <br></br>
+                    <br></br>
+                    There's an old maxim that states, “No fun for the writer, no fun for the reader.” No matter what industry you're working in, as a blogger, you should live and die by this statement.
+                    <br></br>
+                    <br></br>
+                    Before you do any of the following steps, be sure to pick a topic that actually interests you. Nothing - and I mean NOTHING - will kill a blog post more effectively than a lack of enthusiasm from the writer. You can tell when a writer is bored by their subject, and it's so cringe-worthy it's a little embarrassing.
+                    <br></br>
+                    <br></br>
+                    I can hear your objections already. “But Dan, I have to blog for a cardboard box manufacturing company.” I feel your pain, I really do. During the course of my career, I've written content for dozens of clients in some less-than-thrilling industries (such as financial regulatory compliance and corporate housing), but the hallmark of a professional blogger is the ability to write well about any topic, no matter how dry it may be. Blogging is a lot easier, however, if you can muster at least a little enthusiasm for the topic at hand.
+                  </div>
                 </div>
-                <div className='grid grid-cols-2'>
-                  <div className='bg-[#fff] shadow-sm rounded-[10px] px-[30px] py-[20px]'>
-                    <form>
-                      <div className='grid grid-cols-2 gap-y-[20px]'>
-                        <div className='text-[#878C8F] text-[14px]'>Domain</div>
-                        <div className="">
-                          <div className="border border-[#BEBEBE] rounded-[10px] mt-2 w-full flex items-center">
-                            <input
-                              type="text"
-                              placeholder="Chemistry"
-                              className="focus-visible:border-indigo-500/100 placeholder-[#283238] outline-none w-full p-[13px] px-[15px] rounded-[10px]" />
-                            <div className="dropdown">
-                              <a className="flex items-center rounded-l-[0px] mr-[15px] h-[50px]" href="javascript:void(0)">
-                                <img src={arrowDownIcon} alt='arrowDownIcon' className='min-w-[20px] h-[20px]' />
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                        <div className='text-[#878C8F] text-[14px]'>Service Type</div>
-                        <div className="">
-                          <div className="border border-[#BEBEBE] rounded-[10px] mt-2 w-full flex items-center">
-                            <input
-                              type="text"
-                              placeholder="Assignment"
-                              className="focus-visible:border-indigo-500/100 placeholder-[#283238] outline-none w-full p-[13px] px-[15px] rounded-[10px]" />
-                            <div className="dropdown">
-                              <div className="flex items-center rounded-l-[0px] mr-[15px] h-[50px]" >
-                                <img src={arrowDownIcon} alt='arrowDownIcon' className='min-w-[20px] h-[20px]' />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className='text-[#878C8F] text-[14px]'>Deliverable</div>
-                        <div className="">
-                          <div className="border border-[#BEBEBE] rounded-[10px] mt-2 w-full flex items-center">
-                            <input
-                              type="text"
-                              placeholder="5000 Words"
-                              className="focus-visible:border-indigo-500/100 placeholder-[#283238] outline-none w-full p-[13px] px-[15px] rounded-[10px]" />
-                            <div className="dropdown">
-                              <div className="flex items-center rounded-l-[0px] mr-[15px] h-[50px]">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className='text-[#878C8F] text-[14px]'>Tools</div>
-                        <div className="">
-                          <div className="border border-[#BEBEBE] rounded-[10px] mt-2 w-full flex items-center">
-                            <input
-                              type="text"
-                              placeholder="Tools"
-                              className="focus-visible:border-indigo-500/100 placeholder-[#283238] outline-none w-full p-[13px] px-[15px] rounded-[10px]" />
-                            <div className="dropdown">
-                              <a className="flex items-center rounded-l-[0px] mr-[15px] h-[50px]" href="javascript:void(0)">
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                        <div className='text-[#878C8F] text-[14px]'>Deadline Date</div>
-                        <div className="">
-                          <div className="border border-[#BEBEBE] rounded-[10px] mt-2 w-full flex items-center">
-                            <input
-                              type="text"
-                              placeholder="15 March 2023"
-                              className="focus-visible:border-indigo-500/100 placeholder-[#283238] outline-none w-full p-[13px] px-[15px] rounded-[10px]" />
-                            <div className="dropdown">
-                              <div className="flex items-center rounded-l-[0px] mr-[15px] h-[50px]" >
-                                <img src={calendarDateIcon} alt='calendarDateIcon' className='min-w-[20px] h-[20px]' />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className='text-[#878C8F] text-[14px]'>Deadline Time</div>
-                        <div className="">
-                          <div className="border border-[#BEBEBE] rounded-[10px] mt-2 w-full flex items-center">
-                            <input
-                              type="text"
-                              placeholder="05:00 AM"
-                              className="focus-visible:border-indigo-500/100 placeholder-[#283238] outline-none w-full p-[13px] px-[15px] rounded-[10px]" />
-                            <div className="dropdown">
-                              <div className="flex items-center rounded-l-[0px] mr-[15px] h-[50px]" >
-                                <img src={TimerIcon} alt='TimerIcon' className='min-w-[20px] h-[20px]' />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className='text-[#878C8F] text-[14px]'>Deadline Time Zone</div>
-                        <div className="">
-                          <div className="border border-[#BEBEBE] rounded-[10px] mt-2 w-full flex items-center">
-                            <input
-                              type="text"
-                              placeholder="Kolkata, West Bengal (GMT+5:30)"
-                              className="focus-visible:border-indigo-500/100 placeholder-[#283238] outline-none w-full p-[13px] px-[15px] rounded-[10px]" />
-                            <div className="dropdown">
-                              <div className="flex items-center rounded-l-[0px] mr-[15px] h-[50px]" >
-                                <img src={arrowDownIcon} alt='arrowDownIcon' className='min-w-[20px] h-[20px]' />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className='text-[#878C8F] text-[14px]'>Package</div>
-                        <div className="">
-                          <div className="border border-[#BEBEBE] rounded-[10px] mt-2 w-full flex items-center">
-                            <input
-                              type="text"
-                              placeholder="Standard"
-                              readOnly
-                              className="focus-visible:border-indigo-500/100 placeholder-[#283238] outline-none w-full p-[13px] px-[15px] rounded-[10px]" />
-                            <div className="dropdown">
-                              <div className="flex items-center rounded-l-[0px] mr-[15px] h-[50px]" >
-                                <img src={arrowDownIcon} alt='arrowDownIcon' className='min-w-[20px] h-[20px]' />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div></div>
-                        <div onClick={() => setQuickOrderListShow(true)} className='w-full bg-[#000] cursor-pointer rounded-[12px] font-[600] py-[18px] text-[#fff] text-[16px] text-center'>
-                          Submit
-                        </div>
+              </div>
+              <div className="col-span-3 max-[767px]:col-span-12">
+                <div className='flex flex-col gap-[12px]'>
+                  <div className='text-[#000] text-[16px] font-[600] leading-[24px] mb-[4px]'>
+                    Categories</div>
+                  <div className='flex justify-between'>
+                    <div className='text-[#A1A5B7] text-[15px] font-[500]'>SaaS Solutions</div>
+                    <div className='text-[#A1A5B7] text-[15px] font-[500]'>24</div>
+                  </div>
+                  <div className='flex justify-between'>
+                    <div className='text-[#A1A5B7] text-[15px] font-[500]'>Company News</div>
+                    <div className='text-[#A1A5B7] text-[15px] font-[500]'>152</div>
+                  </div>
+                  <div className='flex justify-between'>
+                    <div className='text-[#A1A5B7] text-[15px] font-[500]'>Events & Activities</div>
+                    <div className='text-[#A1A5B7] text-[15px] font-[500]'>52</div>
+                  </div>
+                  <div className='flex justify-between'>
+                    <div className='text-[#A1A5B7] text-[15px] font-[500]'>Support Related</div>
+                    <div className='text-[#A1A5B7] text-[15px] font-[500]'>605</div>
+                  </div>
+                  <div className='flex justify-between'>
+                    <div className='text-[#A1A5B7] text-[15px] font-[500]'>Innovations</div>
+                    <div className='text-[#A1A5B7] text-[15px] font-[500]'>70</div>
+                  </div>
+                  <div className='flex justify-between'>
+                    <div className='text-[#A1A5B7] text-[15px] font-[500]'>Product Updates</div>
+                    <div className='text-[#A1A5B7] text-[15px] font-[500]'>502</div>
+                  </div>
+                </div>
+                <div className='pt-[50px]'>
+                  <div className='text-[#000] text-[16px] font-[600] leading-[24px] mb-[15px]'>
+                    Recent Posts</div>
+                  <div className='flex flex-col gap-[15px]'>
+                    <div className='flex items-start gap-[14px]'>
+                      <img src={feedBlogImg} alt='feedBlogImg' className='w-[75px] h-[50px] rounded-[12px]' />
+                      <div>
+                        <div className='text-[#181C32] text-[14px] font-[600]'>About Metronic Admin</div>
+                        <div className='text-[#7E8299] text-[12px] font-[500]'>We've been a focused on making a the sky</div>
                       </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            }
-            {quickOrderListShow &&
-              <div>
-                <div className="text-[24px] font-bold flex items-center gap-[10px] mb-[24px]" >
-                  <img src={backarrowIcon} alt='backarrowIcon' className='mr-1 h-[24px] cursor-pointer'
-                    onClick={() => setQuickOrderListShow(false)} />
-                  Quick Order
-                </div>
-                <div className="grid min-[768px]:grid-cols-2 min-[1199px]:grid-cols-3 min-[1440px]:grid-cols-4 gap-[25px] gap-y-[5px]">
-                  <div className='order-card relative cursor-pointer'
-                  >
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Domain</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Chemistry</div>
                     </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Service Type</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Assignment</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Package</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Standard</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Deliverable</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>5000 Words</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Total Amount</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>£200.00</div>
-                    </div>
-                    <div className='px-[10px] py-[5px] bg-[#7CA1FF] rounded-tl-[10px] absolute bottom-0 right-0 text-[#fff]'>
-                      Payment Due
-                    </div>
-                  </div>
-                  <div className='order-card relative cursor-pointer'
-                  >
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Domain</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Chemistry</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Service Type</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Assignment</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Package</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Standard</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Deliverable</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>5000 Words</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Total Amount</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>£200.00</div>
-                    </div>
-                    <div className='px-[10px] py-[5px] bg-[#7CA1FF] rounded-tl-[10px] absolute bottom-0 right-0 text-[#fff]'>
-                      Payment Due
-                    </div>
-                  </div>
-                  <div className='order-card relative cursor-pointer'
-                  >
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Domain</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Chemistry</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Service Type</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Assignment</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Package</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Standard</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Deliverable</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>5000 Words</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Total Amount</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>£200.00</div>
-                    </div>
-                    <div className='px-[10px] py-[5px] bg-[#7CA1FF] rounded-tl-[10px] absolute bottom-0 right-0 text-[#fff]'>
-                      Payment Due
-                    </div>
-                  </div>
-                  <div className='order-card relative cursor-pointer'
-                  >
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Domain</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Chemistry</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Service Type</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Assignment</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Package</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Standard</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Deliverable</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>5000 Words</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Total Amount</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>£200.00</div>
-                    </div>
-                    <div className='px-[10px] py-[5px] bg-[#7CA1FF] rounded-tl-[10px] absolute bottom-0 right-0 text-[#fff]'>
-                      Payment Due
-                    </div>
-                  </div>
-                  <div className='order-card relative cursor-pointer'
-                  >
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Domain</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Chemistry</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Service Type</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Assignment</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Package</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Standard</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Deliverable</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>5000 Words</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Total Amount</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>£200.00</div>
-                    </div>
-                    <div className='px-[10px] py-[5px] bg-[#7CA1FF] rounded-tl-[10px] absolute bottom-0 right-0 text-[#fff]'>
-                      Payment Due
-                    </div>
-                  </div>
-                </div>
-                <div className='fixed bottom-[40px] right-[40px] cursor-pointer z-10'
-                  onClick={() => setQuickOrderListShow(false)} >
-                  <img src={addIconButton} alt='addIconButton' />
-                </div>
-              </div>
-            }
-          </>
-        }
-        {customOrderShow &&
-          <>
-            {!customOrderListShow &&
-              <>
-                <div className="text-[24px] font-bold flex items-center gap-[10px] mb-[24px]" >
-                  <img src={backarrowIcon} alt='backarrowIcon' className='mr-1 h-[24px] cursor-pointer'
-                    onClick={() => setCustomOrderShow(false)} />
-                  New Order
-                </div>
-                <div className='grid grid-cols-2'>
-                  <div className='bg-[#fff] shadow-sm rounded-[10px] px-[30px] py-[20px]'>
-                    <form>
-                      <div className='grid grid-cols-2 gap-y-[20px]'>
-                        <div className='text-[#878C8F] text-[14px]'>Domain</div>
-                        <div className="">
-                          <div className="border border-[#BEBEBE] rounded-[10px] mt-2 w-full flex items-center">
-                            <input
-                              type="text"
-                              placeholder="Chemistry"
-                              className="focus-visible:border-indigo-500/100 placeholder-[#283238] outline-none w-full p-[13px] px-[15px] rounded-[10px]" />
-                            <div className="dropdown">
-                              <a className="flex items-center rounded-l-[0px] mr-[15px] h-[50px]" href="javascript:void(0)">
-                                <img src={arrowDownIcon} alt='arrowDownIcon' className='min-w-[20px] h-[20px]' />
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                        <div className='text-[#878C8F] text-[14px]'>Service Type</div>
-                        <div className="">
-                          <div className="border border-[#BEBEBE] rounded-[10px] mt-2 w-full flex items-center">
-                            <input
-                              type="text"
-                              placeholder="Assignment"
-                              className="focus-visible:border-indigo-500/100 placeholder-[#283238] outline-none w-full p-[13px] px-[15px] rounded-[10px]" />
-                            <div className="dropdown">
-                              <div className="flex items-center rounded-l-[0px] mr-[15px] h-[50px]" >
-                                <img src={arrowDownIcon} alt='arrowDownIcon' className='min-w-[20px] h-[20px]' />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className='text-[#878C8F] text-[14px]'>Deliverable (In Words)</div>
-                        <div className="">
-                          <div className="border border-[#BEBEBE] rounded-[10px] mt-2 w-full flex items-center">
-                            <input
-                              type="text"
-                              placeholder="5000 Words"
-                              className="focus-visible:border-indigo-500/100 placeholder-[#283238] outline-none w-full p-[13px] px-[15px] rounded-[10px]" />
-                            <div className="dropdown">
-                              <div className="flex items-center rounded-l-[0px] mr-[15px] h-[50px]">
-                              </div>
-                            </div>
-                          </div>
-                          <div className='text-[14px] text-[#878C8F] pt-[5px]'>We consider, 1 Page = 200-250 words.</div>
-                        </div>
-                        <div className='text-[#878C8F] text-[14px]'>Tools</div>
-                        <div className="">
-                          <div className="border border-[#BEBEBE] rounded-[10px] mt-2 w-full flex items-center">
-                            <input
-                              type="text"
-                              placeholder="Tools"
-                              className="focus-visible:border-indigo-500/100 placeholder-[#283238] outline-none w-full p-[13px] px-[15px] rounded-[10px]" />
-                            <div className="dropdown">
-                              <a className="flex items-center rounded-l-[0px] mr-[15px] h-[50px]" href="javascript:void(0)">
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                        <div className='text-[#878C8F] text-[14px]'>Deadline Date</div>
-                        <div className="">
-                          <div className="border border-[#BEBEBE] rounded-[10px] mt-2 w-full flex items-center">
-                            <input
-                              type="text"
-                              placeholder="15 March 2023"
-                              className="focus-visible:border-indigo-500/100 placeholder-[#283238] outline-none w-full p-[13px] px-[15px] rounded-[10px]" />
-                            <div className="dropdown">
-                              <div className="flex items-center rounded-l-[0px] mr-[15px] h-[50px]" >
-                                <img src={calendarDateIcon} alt='calendarDateIcon' className='min-w-[20px] h-[20px]' />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className='text-[#878C8F] text-[14px]'>Deadline Time</div>
-                        <div className="">
-                          <div className="border border-[#BEBEBE] rounded-[10px] mt-2 w-full flex items-center">
-                            <input
-                              type="text"
-                              placeholder="05:00 AM"
-                              className="focus-visible:border-indigo-500/100 placeholder-[#283238] outline-none w-full p-[13px] px-[15px] rounded-[10px]" />
-                            <div className="dropdown">
-                              <div className="flex items-center rounded-l-[0px] mr-[15px] h-[50px]" >
-                                <img src={TimerIcon} alt='TimerIcon' className='min-w-[20px] h-[20px]' />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className='text-[#878C8F] text-[14px]'>Deadline Time Zone</div>
-                        <div className="">
-                          <div className="border border-[#BEBEBE] rounded-[10px] mt-2 w-full flex items-center">
-                            <input
-                              type="text"
-                              placeholder="Kolkata, West Bengal (GMT+5:30)"
-                              className="focus-visible:border-indigo-500/100 placeholder-[#283238] outline-none w-full p-[13px] px-[15px] rounded-[10px]" />
-                            <div className="dropdown">
-                              <div className="flex items-center rounded-l-[0px] mr-[15px] h-[50px]" >
-                                <img src={arrowDownIcon} alt='arrowDownIcon' className='min-w-[20px] h-[20px]' />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className='text-[#878C8F] text-[14px]'>Attach Documents</div>
-                        <div className="flex items-center gap-[10px]">
-                          <div className='bg-[#BDBDBD] p-[15px] text-[14px] font-[600] w-[115px] rounded-[10px] flex gap-[15px]'>
-                            Upload
-                            <img src={uploadIcon} alt='uploadIcon' />
-                          </div>
-                          <div className='text-[14px] font-[400]'>Browse your file</div>
-                        </div>
-                        <div className='text-[#878C8F] text-[14px]'>Package</div>
-                        <div className="">
-                          <div className="border border-[#BEBEBE] rounded-[10px] mt-2 w-full flex items-center">
-                            <input
-                              type="text"
-                              placeholder="Standard"
-                              readOnly
-                              className="focus-visible:border-indigo-500/100 placeholder-[#283238] outline-none w-full p-[13px] px-[15px] rounded-[10px]" />
-                            <div className="dropdown">
-                              <div className="flex items-center rounded-l-[0px] mr-[15px] h-[50px]" >
-                                <img src={arrowDownIcon} alt='arrowDownIcon' className='min-w-[20px] h-[20px]' />
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div></div>
-                        <div onClick={() => setCustomOrderListShow(true)} className='w-full bg-[#000] cursor-pointer rounded-[12px] font-[600] py-[18px] text-[#fff] text-[16px] text-center'>
-                          Submit
-                        </div>
+                    <div className='flex items-start gap-[14px]'>
+                      <img src={feedBlogImg} alt='feedBlogImg' className='w-[75px] h-[50px] rounded-[12px]' />
+                      <div>
+                        <div className='text-[#181C32] text-[14px] font-[600]'>About Metronic Admin</div>
+                        <div className='text-[#7E8299] text-[12px] font-[500]'>We've been a focused on making a the sky</div>
                       </div>
-                    </form>
-                  </div>
-                </div>
-              </>
-            }
-            {customOrderListShow &&
-              <div>
-                <div className="text-[24px] font-bold flex items-center gap-[10px] mb-[24px]" >
-                  <img src={backarrowIcon} alt='backarrowIcon' className='mr-1 h-[24px] cursor-pointer'
-                    onClick={() => setCustomOrderListShow(false)} />
-                  Customize Order
-                </div>
-                <div className="grid min-[768px]:grid-cols-2 min-[1199px]:grid-cols-3 min-[1440px]:grid-cols-4 gap-[25px] gap-y-[5px]">
-                  <div className='order-card relative cursor-pointer'
-                  >
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Domain</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Chemistry</div>
                     </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Service Type</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Assignment</div>
+                    <div className='flex items-start gap-[14px]'>
+                      <img src={feedBlogImg} alt='feedBlogImg' className='w-[75px] h-[50px] rounded-[12px]' />
+                      <div>
+                        <div className='text-[#181C32] text-[14px] font-[600]'>About Metronic Admin</div>
+                        <div className='text-[#7E8299] text-[12px] font-[500]'>We've been a focused on making a the sky</div>
+                      </div>
                     </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Package</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Standard</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Deliverable</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>5000 Words</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Total Amount</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>£200.00</div>
-                    </div>
-                    <div className='px-[10px] py-[5px] bg-[#7CA1FF] rounded-tl-[10px] absolute bottom-0 right-0 text-[#fff]'>
-                      Payment Due
+                    <div className='flex items-start gap-[14px]'>
+                      <img src={feedBlogImg} alt='feedBlogImg' className='w-[75px] h-[50px] rounded-[12px]' />
+                      <div>
+                        <div className='text-[#181C32] text-[14px] font-[600]'>About Metronic Admin</div>
+                        <div className='text-[#7E8299] text-[12px] font-[500]'>We've been a focused on making a the sky</div>
+                      </div>
                     </div>
                   </div>
-                  <div className='order-card relative cursor-pointer'
-                  >
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Domain</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Chemistry</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Service Type</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Assignment</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Package</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Standard</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Deliverable</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>5000 Words</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Total Amount</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>£200.00</div>
-                    </div>
-                    <div className='px-[10px] py-[5px] bg-[#7CA1FF] rounded-tl-[10px] absolute bottom-0 right-0 text-[#fff]'>
-                      Payment Due
-                    </div>
-                  </div>
-                  <div className='order-card relative cursor-pointer'
-                  >
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Domain</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Chemistry</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Service Type</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Assignment</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Package</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Standard</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Deliverable</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>5000 Words</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Total Amount</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>£200.00</div>
-                    </div>
-                    <div className='px-[10px] py-[5px] bg-[#7CA1FF] rounded-tl-[10px] absolute bottom-0 right-0 text-[#fff]'>
-                      Payment Due
-                    </div>
-                  </div>
-                  <div className='order-card relative cursor-pointer'
-                  >
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Domain</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Chemistry</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Service Type</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Assignment</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Package</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Standard</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Deliverable</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>5000 Words</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Total Amount</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>£200.00</div>
-                    </div>
-                    <div className='px-[10px] py-[5px] bg-[#7CA1FF] rounded-tl-[10px] absolute bottom-0 right-0 text-[#fff]'>
-                      Payment Due
-                    </div>
-                  </div>
-                  <div className='order-card relative cursor-pointer'
-                  >
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Domain</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Chemistry</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Service Type</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Assignment</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Package</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>Standard</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Deliverable</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>5000 Words</div>
-                    </div>
-                    <div className='flex justify-between'>
-                      <div className='text-[#808080] font-[500] text-[16px]'>Total Amount</div>
-                      <div className='text-[#000] font-[600] text-[16px]'>£200.00</div>
-                    </div>
-                    <div className='px-[10px] py-[5px] bg-[#7CA1FF] rounded-tl-[10px] absolute bottom-0 right-0 text-[#fff]'>
-                      Payment Due
-                    </div>
-                  </div>
-                </div>
-                <div className='fixed bottom-[40px] right-[40px] cursor-pointer z-10'
-                  onClick={() => setCustomOrderListShow(false)} >
-                  <img src={addIconButton} alt='addIconButton' />
                 </div>
               </div>
-            }
-          </>
-        }
+            </div>
+          </div>
+        </div>
       </div>
-      {!quickOrderShow && !customOrderShow &&
-        <Dialog
-          open={openOrderMenuDialog}
-          onClose={handleOrderMenuClose}
-          aria-labelledby="alert-dialog-title"
-          aria-describedby="alert-dialog-description"
-          className='dialog-text dialog-wrapper'
-        >
-          <div className='relative mt-[20px] w-full'>
-            <div className='bg-[#D9D9D9] rounded-[10px] w-[50px] h-[5px] mx-auto'></div>
-            <img src={closeIcon} className='absolute right-[13px] top-[-7px] cursor-pointer' onClick={handleOrderMenuClose} />
-          </div>
-          <DialogContent>
-            <div className='flex flex-1 gap-[19px] mt-[15px] mb-[25px] '>
-              <div className='p-[15px] w-[158px] flex flex-col justify-between items-center 
-            h-[130px] bg-[#F3F3F3] cursor-pointer rounded-[7px] border border-[#99999933] 
-            hover:border-[#000] font-[700] text-[#000] text-[14px]'
-                onClick={() => setQuickOrderShow(true)}
-              >
-                <div className='bg-[#fff] rounded-[64px] h-[64px] w-[64px] flex items-center justify-center'>
-                  <img src={quickOrderImg} alt='quickOrderImg' className='h-[44px]' />
-                </div>
-                Quick Order
-              </div>
-              <div className='p-[15px] w-[158px] flex flex-col justify-between items-center
-             h-[130px] bg-[#F3F3F3] cursor-pointer rounded-[7px] border border-[#99999933] 
-             hover:border-[#000] font-[700] text-[#000] text-[14px]'
-                onClick={() => setCustomOrderShow(true)}
-              >
-                <div className='bg-[#fff] rounded-[64px] h-[64px] w-[64px] flex items-center justify-center'>
-                  <img src={customizeOrderImg} alt='quickOrderImg' />
-                </div>
-                Customize Order
-              </div>
-            </div>
-            <div onClick={handleOrderMenuClose} className='w-full bg-[#000] cursor-pointer rounded-[12px] font-[600] py-[18px] text-[#fff] text-[16px] text-center'>
-              Next
-            </div>
-          </DialogContent>
-        </Dialog>
-      }
       <footer className='sticky bottom-0 w-full bg-[#fff] h-[60px] z-10 min-[992px]:hidden'>
-        <div className='grid grid-cols-5 h-full'>
-          <div className='flex justify-center items-center flex-col relative gap-y-[5px]'>
+        <div className='grid grid-cols-5 h-full'>           
+          <div className='flex justify-center items-center flex-col relative gap-y-[5px]' 
+          onClick={() => navigate("/dashboard")}>            
+            <div><img src={home_outline} alt='homeActive' /></div>
+            <div className='text-[12px] text-[#7B838A] font-medium'>Home</div>
+          </div>        
+          <div className='flex justify-center items-center flex-col relative gap-y-[5px]'
+          onClick={() => navigate("/feeds")}>
             <div className='absolute top-0 w-full h-[2px] bg-[#9878DE]'></div>
-            <div><img src={homeActive} alt='homeActive' /></div>
-            <div className='text-[12px] text-[#9878DE] font-medium'>Home</div>
+            <div><img src={Newspaper_active} alt='Newspaper_active.svg' /></div>
+            <div className='text-[12px] text-[#9878DE] font-medium'>Feeds</div>
           </div>
-          <div className='flex justify-center items-center flex-col relative gap-y-[5px]'>
-            <div><img src={newsLaterIcon} alt='homeActive' /></div>
-            <div className='text-[12px] text-[#7B838A] font-medium'>Feeds</div>
-          </div>
-          <div className='flex justify-center items-center flex-col relative gap-y-[5px]'>
+          <div className='flex justify-center items-center flex-col relative gap-y-[5px]'
+          onClick={() => navigate("/help-me")}>            
             <div><img src={HelpFooterIcon} alt='homeActive' /></div>
             <div className='text-[12px] text-[#7B838A] font-medium'>Help Me</div>
           </div>
-          <div className='flex justify-center items-center flex-col relative gap-y-[5px]'>
+          <div className='flex justify-center items-center flex-col relative gap-y-[5px]'
+          onClick={() => navigate("/offers")}>
             <div><img src={localOfferIcon} alt='homeActive' /></div>
             <div className='text-[12px] text-[#7B838A] font-medium'>Offers</div>
           </div>
-          <div className='flex justify-center items-center flex-col relative gap-y-[5px]'>
+          <div className='flex justify-center items-center flex-col relative gap-y-[5px]'
+          onClick={() => navigate("/profile")}>
             <div><img src={profileIcon} alt='homeActive' /></div>
             <div className='text-[12px] text-[#7B838A] font-medium'>Profile</div>
           </div>

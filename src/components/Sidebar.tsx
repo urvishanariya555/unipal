@@ -26,7 +26,7 @@ const Sidebar = () => {
             flex gap-[12px] items-center'
             onClick={() => navigate("/dashboard")}
           >
-            <div><img src={homeIcon} alt="homeIcon" /></div>
+            <div><img src={homeIcon} alt="homeIcon"/></div>
             <div className="text-[#fff] text-[20px] font-bold">Home</div>
           </div>
           <div
@@ -34,31 +34,31 @@ const Sidebar = () => {
             flex gap-[12px] items-center'
             onClick={() => navigate("/feeds")}
           >
-            <div><img src={feedsIcon} alt="feedsIcon" /></div>
+            <div><img src={feedsIcon} alt="feedsIcon"/></div>
             <div className="text-[#111] text-[20px] font-semibold">Feeds</div>
           </div>
           <div
             className='py-[10px] pl-[20px] text-md font-medium cursor-pointer 
             flex gap-[12px] items-center'
-            onClick={() => navigate("/help")}
+            onClick={() => navigate("/help-me")}
           >
-            <div><img src={HelpIcon} alt="HelpIcon" /></div>
+            <div><img src={HelpIcon} alt="HelpIcon"/></div>
             <div className="text-[#111] text-[20px] font-semibold">Help Me</div>
           </div>
           <div
             className='py-[10px] pl-[20px] text-md font-medium cursor-pointer 
             flex gap-[12px] items-center'
-            onClick={() => navigate("/help")}
+            onClick={() => navigate("/offers")}
           >
-            <div><img src={offersIcon} alt="offersIcon" /></div>
+            <div><img src={offersIcon} alt="offersIcon"/></div>
             <div className="text-[#111] text-[20px] font-semibold">Offers</div>
           </div>
           <div
             className='py-[10px] pl-[20px] text-md font-medium cursor-pointer 
             flex gap-[12px] items-center'
-            onClick={() => navigate("/help")}
+            onClick={() => navigate("/profile")}
           >
-            <div><img src={profileIcon} alt="profileIcon" /></div>
+            <div><img src={profileIcon} alt="profileIcon"/></div>
             <div className="text-[#111] text-[20px] font-semibold">Profile</div>
           </div>
         </div>
