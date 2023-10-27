@@ -31,7 +31,7 @@ const ForgotPassword = () => {
                     />
                   </div>
                 </div>
-                <div onClick={() => navigate("/otpVerification")}>
+                <div onClick={() => navigate("/otp-verification")}>
                 <button
                   
                   className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
@@ -71,7 +71,7 @@ const ForgotPassword = () => {
               />
             </div>
           </div>
-          <div onClick={() => navigate("/otpVerification")}>
+          <div onClick={() => navigate("/otp-verification")}>
           <button
             
             className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
