@@ -62,10 +62,6 @@ const Dashboard = () => {
   // addnotes
   const [openNotesDialog, setOpenNotesDialog] = React.useState(false);
 
-  const handleNotesOpenDialog = () => {
-    setOpenNotesDialog(true);
-  };
-
   const handleNoteDialogClose = () => {
     setOpenNotesDialog(false);
   };

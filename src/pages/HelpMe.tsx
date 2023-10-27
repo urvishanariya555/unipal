@@ -30,7 +30,6 @@ import Dots_vertical from '../assets/img/Dots_vertical.svg'
 import ClipImage from '../assets/img/Clip.svg'
 import locationImage from '../assets/img/location.png'
 import Searchchat from '../assets/img/Searchchat.svg'
-import { Swiper, SwiperSlide } from 'swiper/react'
 import { useState } from 'react'
 import * as React from 'react'
 import { useNavigate } from "react-router-dom";
