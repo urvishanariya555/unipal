@@ -23,7 +23,7 @@ const ForgotPassword = () => {
               <form>
                 <div className="w-full">
                   <label className="text-sm font-medium text-[#878C8F]">Email Address</label>
-                  <div className="border rounded mt-2 w-[449px]">
+                  <div className="border rounded mt-2 min-w-[449px] ">
                     <input
                       type="email"
                       placeholder="Type Email Here"
@@ -32,13 +32,13 @@ const ForgotPassword = () => {
                   </div>
                 </div>
                 <div>
-                <div
-                role="button"
-                onClick={() => navigate("/otp-verification")}
-                  className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
-                rounded-[12px] text-[18px] font-[600] mt-[20px]">
-                  Send OTP
-                </div>
+                  <div
+                    role="button"
+                    onClick={() => navigate("/otp-verification")}
+                    className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
+                      rounded-[12px] text-[18px] font-[600] mt-[20px]">
+                    Send OTP
+                  </div>
                 </div>
               </form>
               <div className="text-center text-[#686868] font-[600]">
@@ -55,7 +55,7 @@ const ForgotPassword = () => {
       </div>
       <div className="res-login px-[15px]">
         <div className="flex justify-start pb-[20px] pt-[20px] sticky top-0 bg-[#fff] z-1">
-          <img src={short_lef} className="h-[24px]" onClick={() => navigate("/login")}/>
+          <img src={short_lef} className="h-[24px]" onClick={() => navigate("/login")} />
         </div>
         <div className="flex flex-col justify-start items-start gap-2 ">
           <div className="text-[24px] font-[700] text-[#283238] leading-none">Forgot Password?</div>
@@ -74,13 +74,13 @@ const ForgotPassword = () => {
             </div>
           </div>
           <div>
-          <div
-          role="button"
-            onClick={() => navigate("/otp-verification")}
-            className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
+            <div
+              role="button"
+              onClick={() => navigate("/otp-verification")}
+              className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
                 rounded-[12px] text-[18px] font-[600] mt-[20px]">
-            Send OTP
-          </div>
+              Send OTP
+            </div>
           </div>
         </form>
         <div className="text-center text-[#686868] font-[600] mt-[40px] mb-[30px]">
