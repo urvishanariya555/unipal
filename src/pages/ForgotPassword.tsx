@@ -31,13 +31,13 @@ const ForgotPassword = () => {
                     />
                   </div>
                 </div>
-                <div onClick={() => navigate("/otp-verification")}>
-                <button
-                  
+                <div>
+                <a
+                  href="/otp-verification"
                   className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
                 rounded-[12px] text-[18px] font-[600] mt-[20px]">
                   Send OTP
-                </button>
+                </a>
                 </div>
               </form>
               <div className="text-center text-[#686868] font-[600]">
@@ -71,13 +71,13 @@ const ForgotPassword = () => {
               />
             </div>
           </div>
-          <div onClick={() => navigate("/otp-verification")}>
-          <button
-            
+          <div>
+          <a
+            href="/otp-verification"
             className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
                 rounded-[12px] text-[18px] font-[600] mt-[20px]">
             Send OTP
-          </button>
+          </a>
           </div>
         </form>
         <div className="text-center text-[#686868] font-[600] mt-[40px] mb-[30px]">
