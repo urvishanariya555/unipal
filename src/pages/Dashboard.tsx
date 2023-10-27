@@ -786,10 +786,16 @@ const Dashboard = () => {
               </div>
             </div>
             <div className='flex flex-1 gap-[15px] mt-[17px]'>
-              <div onClick={handleButtonClose} className='cursor-pointer w-full bg-[#666] rounded-[12px] font-[600] py-[12px] sm:py-[18px] text-[#fff] text-[16px]'>
+              <div onClick={handleButtonClose} 
+              className='cursor-pointer w-full bg-[#666] rounded-[12px] font-[600] 
+              py-[12px] sm:py-[18px] text-[#fff] text-[16px]
+              flex justify-center items-center cursor-pointer'>
                 Cancel
               </div>
-              <div onClick={handleButtonClose} className='cursor-pointer w-full bg-[#000] rounded-[12px] font-[600] py-[12px] sm:py-[18px] text-[#fff] text-[16px]'>
+              <div onClick={handleButtonClose} 
+              className='cursor-pointer w-full bg-[#000] rounded-[12px] font-[600] 
+              py-[12px] sm:py-[18px] text-[#fff] text-[16px]
+              flex justify-center items-center cursor-pointer'>
                 Add
               </div>
             </div>
@@ -929,11 +935,15 @@ const Dashboard = () => {
               </div>
             </div>
             <div className='flex flex-1 gap-[15px] mt-[17px]'>
-              <div onClick={handleNewTaskDialogClose} className='w-full bg-[#666] rounded-[12px] font-[600] py-[12px] sm:py-[18px] text-[#fff] text-[16px]'>
+              <div onClick={handleNewTaskDialogClose} 
+              className='w-full bg-[#666] rounded-[12px] font-[600] py-[12px] 
+              sm:py-[18px] text-[#fff] text-[16px] flex justify-center items-center cursor-pointer'>
                 Cancel
               </div>
-              <div onClick={handleNewTaskDialogClose} className='w-full bg-[#000] rounded-[12px] 
-                font-[600] py-[12px] sm:py-[18px] text-[#fff] text-[16px]'>
+              <div onClick={handleNewTaskDialogClose} 
+              className='w-full bg-[#000] rounded-[12px] 
+                font-[600] py-[12px] sm:py-[18px] text-[#fff] text-[16px] 
+                flex justify-center items-center cursor-pointer'>
                 Add
               </div>
             </div>
