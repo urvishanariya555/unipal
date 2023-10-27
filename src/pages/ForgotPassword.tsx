@@ -32,12 +32,13 @@ const ForgotPassword = () => {
                   </div>
                 </div>
                 <div>
-                <span
+                <div
+                role="button"
                 onClick={() => navigate("/otp-verification")}
                   className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
                 rounded-[12px] text-[18px] font-[600] mt-[20px]">
                   Send OTP
-                </span>
+                </div>
                 </div>
               </form>
               <div className="text-center text-[#686868] font-[600]">
@@ -67,17 +68,19 @@ const ForgotPassword = () => {
               <input
                 type="email"
                 placeholder="Type Email Here"
-                className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] px-[20px] rounded-[10px]"
+                className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] 
+                px-[20px] rounded-[10px]"
               />
             </div>
           </div>
           <div>
-          <span
+          <div
+          role="button"
             onClick={() => navigate("/otp-verification")}
             className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
                 rounded-[12px] text-[18px] font-[600] mt-[20px]">
             Send OTP
-          </span>
+          </div>
           </div>
         </form>
         <div className="text-center text-[#686868] font-[600] mt-[40px] mb-[30px]">

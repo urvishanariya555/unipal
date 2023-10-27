@@ -41,12 +41,13 @@ const ResetPassword = () => {
                     <img src={eyeShow} className="h-[18px] right-[15px] top-[20px] absolute" />
                   </div>
                 </div>
-                <button
+                <div
+                role="button"
                   onClick={() => navigate("/login")}
                   className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
                 rounded-[12px] text-[18px] font-[600] mt-[20px]">
                   Save
-                </button>
+                </div>
               </form>
             </div>
           </div>
@@ -81,12 +82,13 @@ const ResetPassword = () => {
               <img src={eyeShow} className="h-[18px] right-[15px] top-[20px] absolute" />
             </div>
           </div>
-          <button
+          <div
+          role="button"
             onClick={() => navigate("/login")}
             className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
               rounded-[12px] text-[18px] font-[600] mt-[20px]">
             Save
-          </button>
+          </div>
         </form>
       </div>
     </>
