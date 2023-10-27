@@ -131,4 +131,9 @@ border: 1px solid #FF8130;
     align-items: flex-start !important;
   }
 }
+@media screen and (min-width: 1025px) {
+.custom-width-dialog .MuiDialog-paper{
+min-width: 385px !important;
+}
+}
 

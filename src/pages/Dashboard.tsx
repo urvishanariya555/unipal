@@ -854,13 +854,15 @@ const Dashboard = () => {
         onClose={handleNewTaskDialogClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
-        className='dialog-text dialog-wrapper'
+        className='dialog-text dialog-wrapper custom-width-dialog'
       >
         <div className='relative mt-[20px] w-full'>
           <div className='bg-[#D9D9D9] rounded-[10px] w-[50px] h-[5px] mx-auto'></div>
           <img src={closeIcon} className='absolute right-[13px] top-[-7px] cursor-pointer' onClick={handleNewTaskDialogClose} />
         </div>
-        <DialogTitle id="alert-dialog-title" style={{ fontFamily: 'Inter, sans-serif' }} className='text-center text-[16px] leading-[24px] font-[600] text-[#111]'>
+        <DialogTitle id="alert-dialog-title" 
+        style={{ fontFamily: 'Inter, sans-serif' }} 
+        className='text-center text-[16px] leading-[24px] font-[600] text-[#111]'>
           {"New Task"}
         </DialogTitle>
         <DialogContent>
