@@ -23,25 +23,25 @@ const Welcome = () => {
                 <div className="text-[16px] text-[#878C8F] ">Create your account using Google, Facebook or with Email.</div>
               </div>
               <div className="flex flex-col gap-[20px]">
-                <div className="w-[449px] border border-[#BEBEBE] rounded-[10px] text-[18px] text-[#363636] font-[500] flex items-center gap-[15px] justify-center p-[18px]">
+                <div className="cursor-pointer w-[449px] border border-[#BEBEBE] rounded-[10px] text-[18px] text-[#363636] font-[500] flex items-center gap-[15px] justify-center p-[18px]">
                   <img src={facebookIcon} alt="facebookIcon" />
                   Sign up with Facebook
                 </div>
-                <div className="w-[449px] border border-[#BEBEBE] rounded-[10px] text-[18px] text-[#363636] font-[500] flex items-center gap-[15px] justify-center p-[18px]">
+                <div className="cursor-pointer w-[449px] border border-[#BEBEBE] rounded-[10px] text-[18px] text-[#363636] font-[500] flex items-center gap-[15px] justify-center p-[18px]">
                   <img src={googleIcon} alt="googleIcon" />
                   Sign up with Google
                 </div>
-                <div className="w-[449px] border border-[#BEBEBE] rounded-[10px] text-[18px] text-[#363636] font-[500] flex items-center gap-[15px] justify-center p-[18px]">
+                <div className="cursor-pointer w-[449px] border border-[#BEBEBE] rounded-[10px] text-[18px] text-[#363636] font-[500] flex items-center gap-[15px] justify-center p-[18px]">
                   <img src={emailIcon} alt="facebookIcon" />
                   Sign up with Email
                 </div>
-                <div className="w-[449px] border border-[#BEBEBE] rounded-[10px] text-[18px] text-[#363636] font-[500] flex items-center gap-[15px] justify-center p-[18px]">
+                <div className="cursor-pointer w-[449px] border border-[#BEBEBE] rounded-[10px] text-[18px] text-[#363636] font-[500] flex items-center gap-[15px] justify-center p-[18px]">
                   <img src={appleIcon} alt="googleIcon" />
                   Sign up with Google
                 </div>
-                <div className="w-[449px] border border-[#BEBEBE] rounded-[10px] text-[18px] text-[#363636] font-[500] flex items-center gap-[15px] justify-center p-[18px]">
+                <div className="cursor-pointer w-[449px] border border-[#BEBEBE] rounded-[10px] text-[18px] text-[#363636] font-[500] flex items-center gap-[15px] justify-center p-[18px]">
                   <img src={mobileIcon} alt="facebookIcon" />
-                  Sign up with Facebook
+                  Sign up with Mobile
                 </div>
               </div>
               <div className="text-center text-[#686868] font-[600]">
