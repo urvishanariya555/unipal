@@ -73,7 +73,7 @@ const ForgotPassword = () => {
           </div>
           <div onClick={() => navigate("/otpVerification")}>
           <button
-            onClick={() => navigate("/otpVerification")}
+            
             className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
                 rounded-[12px] text-[18px] font-[600] mt-[20px]">
             Send OTP
