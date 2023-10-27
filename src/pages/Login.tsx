@@ -53,12 +53,12 @@ const Login = () => {
                     Forgot Password
                   </div>
                 </div>
-                <button
+                <div
                   onClick={() => navigate("/dashboard")}
                   className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
                 rounded-[12px] text-[18px] font-[600] mt-[20px]">
                   Sign In
-                </button>
+                </div>
               </form>
               <div className="flex items-center justify-center gap-4">
                 <div className="h-[1px] w-[50px] bg-[#00000033]"></div>
@@ -127,12 +127,12 @@ const Login = () => {
               Forgot Password
             </div>
           </div>
-          <button
+          <div
             onClick={() => navigate("/dashboard")}
             className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
                 rounded-[12px] text-[18px] font-[600] mt-[20px]">
             Sign In
-          </button>
+          </div>
         </form>
         <div className="flex items-center justify-center gap-4 mt-[30px] mb-[30px]">
           <div className="h-[1px] w-[50px] bg-[#00000033]"></div>

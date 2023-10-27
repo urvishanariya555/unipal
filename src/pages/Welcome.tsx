@@ -40,12 +40,11 @@ const Welcome = () => {
                   Sign up with Google
                 </div>
                 <div className="cursor-pointer w-[449px] border border-[#BEBEBE] rounded-[10px] text-[18px] text-[#363636] font-[500] flex items-center gap-[15px] justify-center p-[18px]">
-                  <img src={mobileIcon} alt="facebookIcon" />
+                  <img src={mobileIcon} alt="facebookIcon"/> 
                   Sign up with Mobile
                 </div>
               </div>
-              <div className="text-center text-[#686868] font-[600]">
-              Already have an account?
+              <div className="text-center text-[#686868] font-[600]">Already have an account?
                 <span
                   onClick={() => navigate("/register")}
                   className="cursor-pointer underline underline-offset-1 text-blue-400 ml-1">

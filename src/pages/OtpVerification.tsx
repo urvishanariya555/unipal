@@ -67,12 +67,12 @@ const OtpVerification = () => {
                     </div>
                   </div>
                 </div>
-                <button
+                <div
                   onClick={() => navigate("/reset-password")}
                   className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
                 rounded-[12px] text-[18px] font-[600] mt-[20px]">
                   Verify
-                </button>
+                </div>
               </form>
             </div>
           </div>
@@ -134,12 +134,12 @@ const OtpVerification = () => {
               </div>
             </div>
           </div>
-          <button
+          <div
             onClick={() => navigate("/reset-password")}
             className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
                 rounded-[12px] text-[18px] font-[600] mt-[20px]">
             Verify
-          </button>
+          </div>
         </form>
       </div>
     </>

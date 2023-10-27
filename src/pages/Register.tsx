@@ -101,12 +101,12 @@ const Register = () => {
                       className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] px-[20px] rounded-[10px]" />
                   </div>
                 </div>
-                <button
+                <div
                   onClick={() => navigate("/dashboard")}
                   className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
                 rounded-[12px] text-[18px] font-[600] mt-[20px]">
                   Sign Up
-                </button>
+                </div>
               </form>
               <div className="text-center text-[#686868] font-[600]">
                 Already have an account?
@@ -208,12 +208,12 @@ const Register = () => {
                 className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] px-[20px] rounded-[10px]" />
             </div>
           </div>
-          <button
+          <div
             onClick={() => navigate("/dashboard")}
             className="w-full cursor-pointer bg-[#000] text-white text-center p-[17px] 
                 rounded-[12px] text-[18px] font-[600] mt-[20px]">
             Sign Up
-          </button>
+          </div>
         </form>
         <div className="text-center text-[#686868] font-[600] mt-[40px] mb-[30px]">
           Already user?
