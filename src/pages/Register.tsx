@@ -19,7 +19,7 @@ const Register = () => {
             <div className="flex flex-col gap-y-[20px]">
               <div className="flex flex-col justify-center items-center gap-2">
                 <div className="text-[32px] font-[700] text-[#283238] leading-none">Welcome Back!</div>
-                <div className="text-[16px] text-[#878C8F]">Enter your email address and password.</div>
+                <div className="text-[16px] text-[#878C8F]">Enter your Details Below to Create New Account.</div>
               </div>
               <form>
                 <div>
@@ -37,7 +37,7 @@ const Register = () => {
                     </div>
                     <input
                       type="text"
-                      placeholder="Type Name Here"
+                      placeholder="Enter Name Here"
                       className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] px-[20px] rounded-[10px]"
                     />
                   </div>
@@ -57,7 +57,7 @@ const Register = () => {
                     </div>
                     <input
                       type="number"
-                      placeholder="Type Number Here"
+                      placeholder="Enter Number Here"
                       className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] px-[20px] rounded-[10px]"
                     />
                   </div>
@@ -67,7 +67,7 @@ const Register = () => {
                   <div className="border rounded mt-2 w-[449px]">
                     <input
                       type="email"
-                      placeholder="Type Email Here"
+                      placeholder="Enter Email Here"
                       className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] px-[20px] rounded-[10px]"
                     />
                   </div>
@@ -77,7 +77,7 @@ const Register = () => {
                   <div className="border rounded mt-2 relative w-[449px]">
                     <input
                       type="password"
-                      placeholder="Type Password"
+                      placeholder="Enter Password"
                       className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] px-[20px] rounded-[10px]" />
                     <img src={eyeShow} className="h-[18px] right-[15px] top-[20px] absolute cursor-pointer" />
                   </div>
@@ -87,7 +87,7 @@ const Register = () => {
                   <div className="border rounded mt-2 relative w-[449px]">
                     <input
                       type="password"
-                      placeholder="Type Conform Password"
+                      placeholder="Enter Conform Password"
                       className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] px-[20px] rounded-[10px]" />
                     <img src={eyeShow} className="h-[18px] right-[15px] top-[20px] absolute cursor-pointer" />
                   </div>
@@ -97,7 +97,7 @@ const Register = () => {
                   <div className="border rounded mt-2 relative w-[449px]">
                     <input
                       type="text"
-                      placeholder="Type Code Here"
+                      placeholder="Enter Code Here"
                       className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] px-[20px] rounded-[10px]" />
                   </div>
                 </div>
@@ -126,7 +126,7 @@ const Register = () => {
         </div>
         <div className="flex flex-col justify-start items-start gap-2 ">
           <div className="text-[24px] font-[700] text-[#283238] leading-none">Create your account</div>
-          <div className="text-[14px] text-[#878C8F] pb-[50px]">Enter your details below to create new account.</div>
+          <div className="text-[14px] text-[#878C8F] pb-[50px]">Enter your Details Below to Create New Account.</div>
         </div>
         <form>
           <div>

@@ -19,7 +19,7 @@ const Login = () => {
             <div className="flex flex-col gap-y-[20px]">
               <div className="flex flex-col justify-center items-center gap-2 ">
                 <div className="text-[32px] font-[700] text-[#283238] leading-none">Welcome Back!</div>
-                <div className="text-[16px] text-[#878C8F] ">Enter your email address and password.</div>
+                <div className="text-[16px] text-[#878C8F] ">Enter your Email Address and Password</div>
               </div>
               <form>
                 <div className="">
@@ -27,7 +27,7 @@ const Login = () => {
                   <div className="border rounded mt-2 w-[449px]">
                     <input
                       type="email"
-                      placeholder="Type Email Here"
+                      placeholder="example@gmail.com"
                       className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] px-[20px] rounded-[10px]"
                     />
                   </div>
@@ -37,7 +37,7 @@ const Login = () => {
                   <div className="border rounded mt-2 relative w-[449px]">
                     <input
                       type="password"
-                      placeholder="Type Password"
+                      placeholder="Your Secret"
                       className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] px-[20px] rounded-[10px]" />
                     <img src={eyeShow} className="h-[18px] right-[15px] top-[20px] absolute" />
                   </div>
@@ -93,7 +93,7 @@ const Login = () => {
         </div>
         <div className="flex flex-col justify-start items-start gap-2 ">
           <div className="text-[24px] font-[700] text-[#283238] leading-none">Welcome Back!</div>
-          <div className="text-[14px] text-[#878C8F] pb-[27px]">Enter your email address and password.</div>
+          <div className="text-[14px] text-[#878C8F] pb-[27px]">Enter your Email Address and Password</div>
         </div>
         <form>
           <div className="">
@@ -101,7 +101,7 @@ const Login = () => {
             <div className="border rounded mt-2 w-full">
               <input
                 type="email"
-                placeholder="Type Email Here"
+                placeholder="example@gmail.com"
                 className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] px-[20px] rounded-[10px]"
               />
             </div>
@@ -111,7 +111,7 @@ const Login = () => {
             <div className="border rounded mt-2 relative w-full">
               <input
                 type="password"
-                placeholder="Type Password"
+                placeholder="Your Secret"
                 className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] px-[20px] rounded-[10px]" />
               <img src={eyeShow} className="h-[18px] right-[15px] top-[20px] absolute" />
             </div>

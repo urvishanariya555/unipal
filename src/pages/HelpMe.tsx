@@ -672,7 +672,7 @@ const HelpMe = () => {
                         </div>
                         <div></div>
                         <div onClick={() => setCustomOrderListShow(true)} className='w-full bg-[#000] cursor-pointer rounded-[12px] font-[600] py-[18px] text-[#fff] text-[16px] text-center'>
-                          Submit
+                        Submit Request
                         </div>
                       </div>
                     </form>

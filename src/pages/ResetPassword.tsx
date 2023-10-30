@@ -18,7 +18,7 @@ const ResetPassword = () => {
             <div className="flex flex-col gap-y-[20px]">
               <div className="flex flex-col justify-center items-center gap-2 ">
                 <div className="text-[32px] font-[700] text-[#283238] leading-none">Reset Password</div>
-                <div className="text-[16px] text-[#878C8F] text-center">Enter and confirm your new password below.</div>
+                <div className="text-[16px] text-[#878C8F] text-center">Enter and Confirm your New Password below.</div>
               </div>
               <form>
                 <div className="mt-[15px]">
@@ -26,7 +26,7 @@ const ResetPassword = () => {
                   <div className="border rounded mt-2 relative w-[449px]">
                     <input
                       type="password"
-                      placeholder="Type Password"
+                      placeholder="Enter Password"
                       className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] px-[20px] rounded-[10px]" />
                     <img src={eyeShow} className="h-[18px] right-[15px] top-[20px] absolute" />
                   </div>
@@ -36,7 +36,7 @@ const ResetPassword = () => {
                   <div className="border rounded mt-2 relative w-[449px]">
                     <input
                       type="password"
-                      placeholder="Type Confirm Password"
+                      placeholder="Enter Confirm Password"
                       className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] px-[20px] rounded-[10px]" />
                     <img src={eyeShow} className="h-[18px] right-[15px] top-[20px] absolute" />
                   </div>
@@ -59,7 +59,7 @@ const ResetPassword = () => {
         </div>
         <div className="flex flex-col justify-start items-start gap-2 ">
           <div className="text-[24px] font-[700] text-[#283238] leading-none">Reset Password</div>
-          <div className="text-[14px] text-[#878C8F] pb-[30px]">Enter and confirm your new password below.</div>
+          <div className="text-[14px] text-[#878C8F] pb-[30px]">Enter and Confirm your New Password below.</div>
         </div>
         <form>
           <div className="mt-[15px]">
@@ -67,7 +67,7 @@ const ResetPassword = () => {
             <div className="border rounded mt-2 relative w-full">
               <input
                 type="password"
-                placeholder="Type Password"
+                placeholder="Enter Password"
                 className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] px-[20px] rounded-[10px]" />
               <img src={eyeShow} className="h-[18px] right-[15px] top-[20px] absolute" />
             </div>
@@ -77,7 +77,7 @@ const ResetPassword = () => {
             <div className="border rounded mt-2 relative w-full">
               <input
                 type="password"
-                placeholder="Type Confirm Password"
+                placeholder="Enter Confirm Password"
                 className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] px-[20px] rounded-[10px]" />
               <img src={eyeShow} className="h-[18px] right-[15px] top-[20px] absolute" />
             </div>

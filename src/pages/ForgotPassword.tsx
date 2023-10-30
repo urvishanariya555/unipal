@@ -18,7 +18,7 @@ const ForgotPassword = () => {
             <div className="flex flex-col gap-y-[20px]">
               <div className="flex flex-col justify-center items-center gap-2 ">
                 <div className="text-[32px] font-[700] text-[#283238] leading-none">Forgot Password</div>
-                <div className="text-[16px] text-[#878C8F] text-center">Type your registered email, &  you will receive an OTP to reset your password.</div>
+                <div className="text-[16px] text-[#878C8F] text-center">Type your Registered Email & You Will Receive an OTP to Reset your Password.</div>
               </div>
               <form>
                 <div className="w-full">
@@ -26,7 +26,7 @@ const ForgotPassword = () => {
                   <div className="border rounded mt-2 min-w-[449px] ">
                     <input
                       type="email"
-                      placeholder="Type Email Here"
+                      placeholder="Enter Email Here"
                       className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] px-[20px] rounded-[10px]"
                     />
                   </div>
@@ -59,7 +59,7 @@ const ForgotPassword = () => {
         </div>
         <div className="flex flex-col justify-start items-start gap-2 ">
           <div className="text-[24px] font-[700] text-[#283238] leading-none">Forgot Password?</div>
-          <div className="text-[14px] text-[#878C8F] pb-[30px]">Type your registered email, &  you will receive an OTP to reset your password.</div>
+          <div className="text-[14px] text-[#878C8F] pb-[30px]">Type your Registered Email & You Will Receive an OTP to Reset your Password.</div>
         </div>
         <form>
           <div className="">
@@ -67,7 +67,7 @@ const ForgotPassword = () => {
             <div className="border rounded mt-2 w-full">
               <input
                 type="email"
-                placeholder="Type Email Here"
+                placeholder="Enter Email Here"
                 className="focus-visible:border-indigo-500/100 outline-none w-full p-[16px] 
                 px-[20px] rounded-[10px]"
               />

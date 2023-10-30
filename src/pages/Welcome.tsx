@@ -36,8 +36,8 @@ const Welcome = () => {
                   Sign up with Email
                 </div>
                 <div className="cursor-pointer w-[449px] border border-[#BEBEBE] rounded-[10px] text-[18px] text-[#363636] font-[500] flex items-center gap-[15px] justify-center p-[18px]">
-                  <img src={appleIcon} alt="googleIcon" />
-                  Sign up with Google
+                  <img src={appleIcon} alt="appleIcon" />
+                  Sign Up with Apple ID
                 </div>
                 <div className="cursor-pointer w-[449px] border border-[#BEBEBE] rounded-[10px] text-[18px] text-[#363636] font-[500] flex items-center gap-[15px] justify-center p-[18px]">
                   <img src={mobileIcon} alt="facebookIcon"/> 

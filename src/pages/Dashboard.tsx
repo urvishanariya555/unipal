@@ -182,7 +182,6 @@ const Dashboard = () => {
             <div className='mt-[25px]'>
               <div className="pb-[15px] flex flex-between">
                 <div className='text-[20px] max-[767px]:text-[16px] text-[#000] font-bold flex-1'>Features</div>
-                <div className='text-[18px] max-[767px]:text-[14px] text-[#787878] font-regular underline'>View All</div>
               </div>
               <Swiper
                 spaceBetween={50}
@@ -222,16 +221,6 @@ const Dashboard = () => {
                     </div>
                     <div className='text-[22px] text-[#000] font-bold flex items-center justify-between'>My notes
                       <img src={circle_right_arrow_pink} alt='circle_right_arrow_pink' />
-                    </div>
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className='feature-card relative cursor-pointer' onClick={() => navigate("/help-me")}>
-                    <div className='h-[60px] w-[60px] rounded-full flex items-center justify-center bg-[#ff8b0f59] mb-[24px]'>
-                      <img src={Chat} alt='Chat' />
-                    </div>
-                    <div className='text-[22px] text-[#000] font-bold flex items-center justify-between'>Help Me
-                      <img src={circle_right_arrow_orange} alt='circle_right_arrow_orange' />
                     </div>
                   </div>
                 </SwiperSlide>
@@ -758,7 +747,7 @@ const Dashboard = () => {
       >
         <div className='relative mt-[20px] w-full'>
           <div className='bg-[#D9D9D9] rounded-[10px] w-[50px] h-[5px] mx-auto'></div>
-          <img src={closeIcon} className='absolute right-[13px] top-[-7px] cursor-pointer' onClick={handleButtonClose} />
+          {/* <img src={closeIcon} className='absolute right-[13px] top-[-7px] cursor-pointer' onClick={handleButtonClose} /> */}
         </div>
         <DialogTitle id="alert-dialog-title" style={{ fontFamily: 'Inter, sans-serif' }} className='text-center text-[16px] leading-[24px] font-[600] text-[#111]'>
           {"Add Meeting Schedule"}
@@ -872,7 +861,7 @@ const Dashboard = () => {
               <div className="border border-[#BEBEBE] rounded-[10px] mt-2 w-full flex items-center">                
                 <input
                   type="text"
-                  placeholder="Type Title Name"
+                  placeholder="Enter Title Name"
                   className="focus-visible:border-indigo-500/100 placeholder-[#283238] outline-none w-full p-[13px] px-[15px] rounded-[10px]" />
                   <div className="dropdown">
                   <a className="flex items-center rounded-l-[0px] btn btn-secondary bg-[#D4D6D7] border-[#D4D6D7] h-[50px]" href="javascript:void(0)">

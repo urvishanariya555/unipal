@@ -17,7 +17,7 @@ const OtpVerification = () => {
             <div className="flex flex-col gap-y-[20px]">
               <div className="flex flex-col justify-center items-center gap-2 ">
                 <div className="text-[32px] font-[700] text-[#283238] leading-none">OTP Verification</div>
-                <div className="text-[16px] text-[#878C8F] text-center">Enter OTP that we have sent you in your email  johndoe@gmail.com</div>
+                <div className="text-[16px] text-[#878C8F] text-center">Enter OTP that We have Sent You in your Email johndoe@gmail.com</div>
               </div>
               <form>
                 <div className="w-full">
@@ -84,7 +84,7 @@ const OtpVerification = () => {
         </div>
         <div className="flex flex-col justify-start items-start gap-2 ">
           <div className="text-[24px] font-[700] text-[#283238] leading-none">OTP Verification</div>
-          <div className="text-[14px] text-[#878C8F] pb-[30px]">Enter OTP that we have sent you in your email  johndoe@gmail.com</div>
+          <div className="text-[14px] text-[#878C8F] pb-[30px]">Enter OTP that We have Sent You in your Email johndoe@gmail.com</div>
         </div>
         <form>
           <div className="">
